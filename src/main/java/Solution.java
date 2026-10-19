@@ -8,78 +8,69 @@ public class Solution {
     private int idNumber;
 
     public Solution(String model, int id) {
-        //implement code here
+        this.calcModel = model;
+        this.idNumber = id;
     }
 
     public Solution(int id) {
-        //implement code here
+        this("TI-84", id);
     }
 
     public String getCalcModel() {
-        //implement code here
-        return "";
+        return this.calcModel;
     }
 
     public void setCalcModel(String newModel) {
-        //implement code here
+        this.calcModel = newModel;
     }
 
     public int getIdNumber() {
-        //implement code here
-        return 0;
+        return this.idNumber;
     }
 
     public void setIdNumber(int newId) {
-        //implement code here
+        this.idNumber = newId;
     }
 
     public void incrementId() {
-        //implement code here
+        this.idNumber++;
     }
 
     public double add(double num1, double num2) {
-        //implement code here
-        return 0.00;
+        return num1 + num2;
     }
 
     public double subtract(double num1, double num2) {
-        //implement code here
-        return 0.00;
+        return num1 - num2;
     }
 
     public double multiply(double num1, double num2) {
-        //implement code here
-        return 0.00;
+        return num1 * num2;
     }
 
     public int quotient(int num1, int num2) {
-        //implement code here
-        return 0;
+        return num1 / num2;
     }
 
     public int remainder(int num1, int num2) {
-        //implement code here
-        return 0;
+        return num1 % num2;
     }
 
     public String divisionResult(int num1, int num2) {
-        //implement code here
-        return "";
+        return this.quotient(num1, num2) + " R " + this.remainder(num1, num2);
     }
 
     public String coordinatePair(int x, int y) {
-        //implement code here
-        return "";
+        return "(" + x + ", " + y + ")";
     }
 
     public int average(int num1, int num2) {
-        //implement code here
-        return 0;
+        int total = num1 + num2;
+        return total / 2 + total % 2;
     }
 
     public String info() {
-        //implement code here
-        return "";
+        return "This calculator is a model " + this.calcModel + " with id " + this.idNumber;
     }
 
 }
